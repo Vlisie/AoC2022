@@ -56,7 +56,7 @@ fun main() {
         }
     }
 
-    fun part1(): Int = File("src", "input2.txt")
+    fun part1(): Int = File("src", "input/input2.txt")
         .readText()
         .trimEnd()
         .split("\n".toRegex())
@@ -87,9 +87,9 @@ fun main() {
         .sum()
 
     // test if implementation meets criteria from the description, like:
-    val testInput = File("src", "testInput.txt")
+    val testInput = File("src", "input/testInput.txt")
     check(part2(testInput) == 12)
 
-    val input = File("src", "input2.txt")
+    val input = File("src", "input/input2.txt")
     println(part2(input))
 }

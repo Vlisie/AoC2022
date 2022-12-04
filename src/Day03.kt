@@ -68,9 +68,9 @@ fun main() {
     }
 
     // test if implementation meets criteria from the description, like:
-    val testInput = File("src", "testInput.txt")
+    val testInput = File("src", "input/testInput.txt")
     check(part2(testInput) == 70)
 
-    val input = File("src", "input3.txt")
+    val input = File("src", "input/input3.txt")
     println(part2(input))
 }
