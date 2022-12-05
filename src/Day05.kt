@@ -2,6 +2,14 @@ import java.io.File
 
 fun main() {
 
+    fun maakAntwoordString(stapelLijst: List<ArrayDeque<Char>>): String {
+        var eindString = ""
+        for (stack in stapelLijst.asIterable()) {
+            eindString += if (stack.isNotEmpty()) stack.last() else ""
+        }
+        return eindString
+    }
+
     fun part1(file: File): String {
         val stapelLijst: List<ArrayDeque<Char>> = List(9) { ArrayDeque() }
         file.readText()
@@ -24,11 +32,7 @@ fun main() {
                     }
                 }
             }
-        var eindString = ""
-        for (stack in stapelLijst.asIterable()) {
-            eindString += if (stack.isNotEmpty()) stack.last() else ""
-        }
-        return eindString
+        return maakAntwoordString(stapelLijst)
     }
 
     fun part2(file: File): String {
@@ -57,11 +61,7 @@ fun main() {
                     }
                 }
             }
-        var eindString = ""
-        for (stack in stapelLijst.asIterable()) {
-            eindString += if (stack.isNotEmpty()) stack.last() else ""
-        }
-        return eindString
+        return maakAntwoordString(stapelLijst)
     }
 
     // test if implementation meets criteria from the description, like:
