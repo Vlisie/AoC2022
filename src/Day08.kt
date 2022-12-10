@@ -34,7 +34,7 @@ fun main() {
     }
 
     fun part2(file: File): Int {
-        var scenicScore = 0
+        val scenicScore: Int
         val grid = file.readLines()
             .map { string ->
                 string.chunked(1)
